@@ -36,8 +36,8 @@ val app: HttpHandler = routes(
         val form = signUpUser.registrationForm(request)
         val username = signUpUser.requiredUser(form)
         val email = signUpUser.requiredEmail(form)
-        val password = signUpUser.requiredPassword(form)
-        val passwordConfirmation = signUpUser.requiredPasswordConfirmation(form)
+        //val password = signUpUser.requiredPassword(form)
+        //val passwordConfirmation = signUpUser.requiredPasswordConfirmation(form)
 /*
         val viewModel = SignUpUserModel("", "", "", "")
         val renderTemplate = templateRenderer(viewModel)*/
