@@ -25,9 +25,16 @@
             <input type="password" name="password-confirmation" placeholder="Confirm your password">
         </div>
         <div>
-            <input type="submit" value="Register">
+            <input type="submit" value="Register" onclick="redirectToLogin()">
         </div>
     </form>
 </div>
+
+<script>
+    function redirectToLogin() {
+        window.location.href = "/login";
+    }
+</script>
+
 </body>
 </html>
