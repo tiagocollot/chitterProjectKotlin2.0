@@ -4,7 +4,7 @@
 
 Open this project in IntelliJ and make sure Gradle has installed dependencies. 
 
-Run the `main` function in the file `src/main/kotlin/com/example/models/Main.kt` to start the server.
+Run the `main` function in the file `src/main/kotlin/com/example/Main.kt` to start the server.
 
 Browse the app at http://localhost:9000
 
