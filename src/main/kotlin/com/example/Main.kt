@@ -38,7 +38,7 @@ val app: HttpHandler = routes(
         // Extract form data and required fields from the request
         val form = signUpUser.registrationForm(request)
         val username = signUpUser.requiredUser(form)
-        val email = signUpUser.requiredEmail(form)
+        //val email = signUpUser.requiredEmail(form)
 
         // Create a redirect response to "/login"
         val redirectUrl = "/login"
