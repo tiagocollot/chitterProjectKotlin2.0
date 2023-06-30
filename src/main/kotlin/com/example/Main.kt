@@ -40,8 +40,13 @@ val app: HttpHandler = routes(
         val username = signUpUser.requiredUser(form)
         val email = signUpUser.requiredEmail(form)
 
+        // Create a redirect response to "/login"
+        val redirectUrl = "/login"
+        val redirectResponse = Response(Status.SEE_OTHER).header("Location", redirectUrl)
+        // Return the redirect response
+        redirectResponse
         // Return a response indicating successful form submission
-        Response(Status.OK).body("The form was successfully submitted!\nusername:${username} email:${email} ")
+       // Response(Status.OK).body("The form was successfully submitted!\nusername:${username} email:${email} ")
     },
     // Define the login endpoint for GET requests
     "/login" bind Method.GET to { _: Request ->
@@ -70,6 +75,7 @@ val app: HttpHandler = routes(
         }
     }
 )
+
 
 // Function to validate login credentials
 fun isValidLogin(username: String, password: String): Boolean {
